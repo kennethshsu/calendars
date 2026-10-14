@@ -133,7 +133,7 @@ Holidays_Sources = [
     ["https://calendar.google.com/calendar/ical/en.taiwan%23holiday%40group.v.calendar.google.com/public/basic.ics", "🇹🇼"],
     ["https://calendar.google.com/calendar/ical/en.mexican%23holiday%40group.v.calendar.google.com/public/basic.ics", "🇲🇽"],
     ["https://ics.calendarlabs.com/577/fcc99924/Nyse_Market_Holidays.ics", "🏦"],
-      ["https://www.brownbearsw.com/calcium/icalendar/us_informal_holidays.ics", "🎈"],
+    ["https://www.brownbearsw.com/calcium/icalendar/us_informal_holidays.ics", "🎈"],
 ]
 
 Arenas_Sources = [
