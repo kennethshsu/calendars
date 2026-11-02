@@ -145,7 +145,14 @@ Arenas_Sources = [
 def fetch_calendar(url):
     request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urlopen(request, timeout=30) as response:
-        return Calendar.from_ical(response.read())
+        data = response.read()
+        
+    # chasecentercalendar.com uses REFRESH-INTERVAL:VALUE=DURATION:…; RFC 7986 uses ;VALUE=DURATION:
+    data = data.replace(
+        b"REFRESH-INTERVAL:VALUE=DURATION:",
+        b"REFRESH-INTERVAL;VALUE=DURATION:",
+    )
+    return Calendar.from_ical(data)
 
 
 def consolidate_icals(sources, calendar_name, filename):
